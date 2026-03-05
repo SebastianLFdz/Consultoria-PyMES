@@ -1,0 +1,325 @@
+/* =========================================
+   VARIABLES DE COLOR Y TIPOGRAFÍA
+   (Cambia estos valores por los de tu marca)
+========================================= */
+:root {
+    --color-primario: #0056b3; /* Azul oscuro corporativo */
+    --color-secundario: #00a8ff; /* Azul claro llamativo */
+    --color-fondo: #f8f9fa; /* Gris muy claro para el fondo */
+    --color-texto: #333333; /* Gris oscuro para el texto (mejor lectura que negro puro) */
+    --color-blanco: #ffffff;
+    --color-whatsapp: #25D366; /* Verde oficial de WhatsApp */
+    --fuente-principal: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* =========================================
+   RESETEO BÁSICO
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Hace que al hacer clic en el menú, el deslizamiento sea suave */
+}
+
+body {
+    font-family: var(--fuente-principal);
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    line-height: 1.6;
+}
+
+/* =========================================
+   ENCABEZADO Y NAVEGACIÓN
+========================================= */
+header {
+    background-color: var(--color-blanco);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+.logo h2 {
+    color: var(--color-primario);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-secundario);
+}
+
+/* =========================================
+   SECCIONES GENERALES
+========================================= */
+main {
+    max-width: 1200px; /* Ancho máximo para pantallas grandes */
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+section > h2 {
+    text-align: center;
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+section > p {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #666;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+    margin: 2rem 0;
+}
+
+/* =========================================
+   INICIO
+========================================= */
+#inicio header h1 {
+    font-size: 2.5rem;
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+}
+
+.trayectoria-valores, .alcance {
+    background-color: var(--color-blanco);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.trayectoria-valores ul {
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+/* =========================================
+   CASOS DE ÉXITO (GRID)
+========================================= */
+.grid-casos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.caso {
+    background-color: var(--color-blanco);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Efecto dinámico al pasar el mouse */
+.caso:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.caso h3 {
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--color-secundario);
+    padding-bottom: 0.5rem;
+}
+
+.caso-detalles p {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.caso-media {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.caso-media img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    margin-bottom: 1rem;
+}
+
+.caso-media a {
+    display: inline-block;
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.caso-media a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   SOCIOS COMERCIALES
+========================================= */
+.proximamente-banner {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+}
+
+.proximamente-banner h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* =========================================
+   CONTACTO
+========================================= */
+.contacto-opciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.formulario-contacto {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--color-blanco);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.formulario-contacto h3 {
+    margin-bottom: 1.5rem;
+    color: var(--color-primario);
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    margin-top: 0.3rem;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+    outline: none;
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 5px rgba(0, 168, 255, 0.3);
+}
+
+.formulario-contacto button {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.formulario-contacto button:hover {
+    background-color: #003d82; /* Azul más oscuro al pasar el mouse */
+}
+
+.contacto-whatsapp {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contacto-whatsapp h3 {
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+}
+
+.btn-whatsapp {
+    background-color: var(--color-whatsapp);
+    color: var(--color-blanco);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe57; /* Verde más oscuro */
+    transform: scale(1.05);
+}
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
+footer {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 4rem;
+}
+
+/* =========================================
+   RESPONSIVO (MÓVILES Y TABLETS)
+========================================= */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #inicio header h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        will-change: opacity, transform; /* Optimiza el rendimiento del navegador para la animación */
+    }
+}
